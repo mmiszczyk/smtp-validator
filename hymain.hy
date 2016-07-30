@@ -2,6 +2,6 @@
 
 ;TODO: output, command line args
 
-(import inputhandling)
+(import inputhandling smtputils)
 
-(print (inputhandling.check-host-list (inputhandling.read-hosts-from-stdin)))
+(print (smtputils.check-host-list (inputhandling.read-hosts-from-stdin)))

@@ -47,4 +47,7 @@
   (if records
     (for [record records]                                    ; I wanted to do it with recursion but couldn't get it
       ((setv ret (check-smtp record port))(lif ret (break))) ; to work so I used (for)
-    ))ret)                                                   ; I'm not sure if it's my fault or some hy quir
+    ))ret)                                                   ; I'm not sure if it's my fault or some hy quirk
+
+(defn check-host-list[hosts]
+  (for [hostname hosts] (if-not (check-smtp hostname) (hosts.remove hostname))) hosts)
