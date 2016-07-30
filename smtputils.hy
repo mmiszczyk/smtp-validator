@@ -13,6 +13,8 @@
 ;    further details)    ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; TODO: choice between active and passive checking
+
 (import dns.resolver socket) ; dns.resolver to get MX records, socket to attempt connection
 
 (defn get-domain-from-email[email]
