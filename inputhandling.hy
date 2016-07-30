@@ -1,4 +1,17 @@
-;TODO: active and passive checking
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;     inputhandling:     ;
+; part of smtp-validator ;
+;                        ;
+;     copyright 2016     ;
+;   by Maciej Miszczyk   ;
+;                        ;
+;  this program is free  ;
+;           and          ;
+;  open source software  ;
+; released under GNU GPL ;
+;    (see COPYING for    ;
+;    further details)    ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (import smtputils sys)
 
