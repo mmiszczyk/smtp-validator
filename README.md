@@ -1,3 +1,6 @@
+smtp-validator 0.1
+==========================
+
 About
 -----
 smtp-validator is a tool for filtering out fake or deactivated e-mail addresses
@@ -11,13 +14,26 @@ of my earlier tools which performed the same operations through shell scripting
 (bash on *nix systems, batch on Windows) and were therefore slow, ugly and not
 portable.
 
+Usage
+-----
+    usage: smtp-validator.py [-h] [-i INPUT] [-o OUTPUT] [-p]
+    
+    Validates SMTP servers (or e-mail addresses) by performing MX lookup and
+    trying to connect. Outputs a list of working servers.
+    
+    optional arguments:
+      -h, --help            show this help message and exit
+      -i INPUT, --input INPUT
+                            Input file (default: stdin)
+      -o OUTPUT, --output OUTPUT
+                            Output file (default: stdout)
+      -p, --passive         MX lookup only, don't connect to target server
+
 TODO
 ----
-smtp-validator is a work in progress. Upcoming features:
-+ command line argument handling
-+ input/output with stdin/stdio as well as text files
-+ choice between active and passive (no connection to SMTP server) mode
-
++ output e-mail addresses instead of just hosts
++ performance optimization
++ replace a few ugly hack with more elegant solutions
 
 Author
 ------
