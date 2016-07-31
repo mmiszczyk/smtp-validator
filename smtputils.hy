@@ -49,5 +49,7 @@
       ((setv ret (check-smtp record port))(lif ret (break))) ; to work so I used (for)
     ))ret)                                                   ; I'm not sure if it's my fault or some hy quirk
 
-(defn check-host-list[hosts]
-  (for [hostname hosts] (if-not (check-smtp hostname) (hosts.remove hostname))) hosts)
+; validate list of hosts
+; optional second parameter to specify a custom validation function
+(defn check-host-list[hosts &optional [checkfunc has-mailserver]]
+  (for [hostname hosts] (if-not (checkfunc hostname) (hosts.remove hostname))) hosts)
